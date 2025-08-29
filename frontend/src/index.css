@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --font-display: "Coiny", cursive;
+  --font-body: "", sans-serif;
+  font-family: 'Open Sans';
+}
+
+::selection {
+  background: #93bbd8;
+  color: #000000;
+}
+
+/* .nav {
+  font-family: 'Sarnia', cursive;
+} */
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-white/30 shadow-md;
+  }
+  
+  .hover-card {
+    @apply transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .form-input-wrapper {
+    @apply relative mb-6;
+  }
+  
+  .form-input {
+    @apply w-full py-4 px-4 bg-white/50 border border-medisure-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-medisure-400 transition-all duration-200;
+  }
+  
+  .form-label {
+    @apply absolute -top-2.5 left-3 px-1 text-sm font-medium text-medisure-700 bg-white;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-medisure-600 text-white py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-medisure-50 hover:bg-medisure-600 text-white py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+  
+  
+  .card-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .page-transition {
+    @apply animate-fade-in;
+  }
+}
